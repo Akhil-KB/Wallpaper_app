@@ -64,12 +64,8 @@ class _landing_pageState extends State<landing_page> {
             fontWeight: FontWeight.bold
           ),),
           actions: [
-            if( _currentIndex!=2)IconButton(
-                onPressed: (){},
-                icon: Icon(Icons.search,
-                color: Colors.black,
-                )
-            )
+            if( _currentIndex!=2)
+            Image.asset("assets/images/search.png")
           ],
           centerTitle: _currentIndex==2?true:false,
         ),

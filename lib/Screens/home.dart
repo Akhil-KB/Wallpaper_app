@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:walpaper/Network/wallpaper_network.dart';
+import 'package:walpaper/Screens/wallpaperPage.dart';
 
 import '../Model/latestModel.dart';
 import '../Widgets/HomeCardWidget.dart';
@@ -37,7 +38,14 @@ class _home_pageState extends State<home_page> {
                   childAspectRatio: 0.60,
                 ),
                 itemBuilder: (BuildContext context, int index) {
-                  return HomeCardWidget(link:widget.Latest[index].src.portrait);
+                  return GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ApplyWallpaper(link: widget.Latest[index].src.portrait,)),
+                        );
+                      },
+                      child: HomeCardWidget(link:widget.Latest[index].src.portrait));
                 },
                 itemCount: widget.Latest.length,
               ),

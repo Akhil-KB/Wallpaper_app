@@ -30,7 +30,8 @@ class _HomeCardWidgetState extends State<HomeCardWidget> {
                 blurRadius: 2,
                 offset: Offset(0, 1),
                 spreadRadius: 0,
-              ),BoxShadow(
+              ),
+              BoxShadow(
                 color: Color(0x19101828),
                 blurRadius: 3,
                 offset: Offset(0, 1),

@@ -43,7 +43,6 @@ class Search {
 }
 
 
-
 class Src {
   String original;
   String large2X;
